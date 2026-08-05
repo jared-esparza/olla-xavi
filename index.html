@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cocina casera y auténtica en Bonastre. Descubre el menú, la carta, los frankfurts, las hamburguesas y las galletas de L’olla d’en Xavi.">
+    <meta name="theme-color" content="#151617">
+    <link rel="icon" type="image/png" href="img/Logo negro contorno blanco grueso l_olla_d_en_xavi.png">
+    <title>L’olla d’en Xavi | Cocina casera en Bonastre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js?v=4" defer></script>
+  </head>
+  <body id="inicio">
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#inicio" aria-label="L’olla d’en Xavi, inicio">
+          <img src="img/Logo negro contorno blanco grueso l_olla_d_en_xavi.png" alt="L’olla d’en Xavi" width="1474" height="1264">
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+          <span class="menu-toggle-lines" aria-hidden="true"></span>
+          <span class="sr-only">Abrir menú</span>
+        </button>
+
+        <nav class="main-nav" id="main-navigation" aria-label="Navegación principal">
+          <a class="nav-home is-active" href="#inicio">Inicio</a>
+          <a class="site-link" href="#" data-site-link="menu">Menú diario</a>
+          <a class="site-link" href="#" data-site-link="carta">Carta</a>
+          <a class="site-link" href="#" data-site-link="frankfurts-hamburguesas">Frankfurts y hamburguesas</a>
+          <a class="site-link" href="#" data-site-link="galletas">Galletas</a>
+          <a href="#galeria">Galería</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <div class="header-actions" aria-label="Contacto rápido">
+          <a href="https://www.instagram.com/lolla_den_xavi/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de L’olla d’en Xavi"><img class="social-logo" src="img/icons/instagram.svg" alt=""></a>
+          <a href="tel:+34646987656" aria-label="Llamar al 646 987 656">☎</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Bonastre · Tarragona</p>
+            <h1 id="hero-title">Cocina casera,<br><span>100% auténtica</span></h1>
+            <p class="hero-location">Bonastre · Tarragona</p>
+            <p class="hero-intro">Producto de calidad, cocina de proximidad y el mejor ambiente para disfrutar cada día.</p>
+            <a class="button button-primary" href="#accesos">Ver menú diario <span aria-hidden="true">→</span></a>
+          </div>
+
+          <div class="hero-collage" aria-label="Selección de platos de L’olla d’en Xavi">
+            <figure class="photo-card photo-card-one">
+              <picture>
+                <source srcset="img/webp/bravas.webp" type="image/webp">
+                <img src="img/bravas.jpg" alt="Patatas bravas con salsa y perejil" width="4032" height="2268" fetchpriority="high">
+              </picture>
+            </figure>
+            <figure class="photo-card photo-card-two">
+              <picture>
+                <source srcset="img/webp/carne.webp" type="image/webp">
+                <img src="img/carne.jpg" alt="Carne a la plancha con patatas" width="4032" height="2268" fetchpriority="high">
+              </picture>
+            </figure>
+            <figure class="photo-card photo-card-three">
+              <picture>
+                <source srcset="img/webp/ensalada.webp" type="image/webp">
+                <img src="img/ensalada.jpg" alt="Ensalada fresca con queso y tomates" width="4032" height="2268" fetchpriority="high">
+              </picture>
+            </figure>
+            <div class="quality-stamp" aria-hidden="true"><strong>100%</strong><span>auténtico</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-links" id="accesos" aria-labelledby="quick-links-title">
+        <h2 class="sr-only" id="quick-links-title">Descubre nuestra cocina</h2>
+        <div class="quick-links-inner">
+          <article class="quick-card">
+            <span class="quick-icon" aria-hidden="true">♨</span>
+            <h3>Menú diario</h3>
+            <p>De lunes a viernes: primeros, segundos, postre, pan, bebida y café.</p>
+            <a class="button site-link" href="#" data-site-link="menu">Ver menú diario <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="quick-card">
+            <span class="quick-icon" aria-hidden="true">✦</span>
+            <h3>Carta</h3>
+            <p>Una selección de tapas, platos y especialidades para todos los gustos.</p>
+            <a class="button site-link" href="#" data-site-link="carta">Ver la carta <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="quick-card">
+            <span class="quick-icon" aria-hidden="true">⌁</span>
+            <h3>Frankfurts y hamburguesas</h3>
+            <p>Opciones caseras elaboradas con ingredientes de calidad y mucho sabor.</p>
+            <a class="button site-link" href="#" data-site-link="frankfurts-hamburguesas">Ver frankfurts y hamburguesas <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="quick-card">
+            <span class="quick-icon" aria-hidden="true">●</span>
+            <h3>Galletas</h3>
+            <p>Una deliciosa selección de galletas artesanas para endulzar el día.</p>
+            <a class="button site-link" href="#" data-site-link="galletas">Ver galletas <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="chicken-promo" id="pollos-domingo" aria-labelledby="chicken-promo-title">
+        <div class="chicken-promo-inner">
+          <div class="chicken-promo-copy">
+            <p class="chicken-eyebrow">Especial de los domingos</p>
+            <h2 id="chicken-promo-title">Pollos <span>a l’ast</span></h2>
+            <p class="chicken-highlight">Todos los domingos</p>
+            <p class="chicken-description">Pollos jugosos, sabrosos y preparados con todo el cariño. Haz tu encargo y disfruta en familia sin cocinar.</p>
+            <p class="chicken-hours"><span aria-hidden="true">◷</span><strong>Recogida de 12:00 a 15:00</strong></p>
+            <div class="chicken-actions">
+              <a class="button chicken-whatsapp" href="https://wa.me/34646987656?text=Hola%2C%20quiero%20encargar%20pollo%20a%20l%27ast%20para%20este%20domingo" target="_blank" rel="noopener noreferrer">
+                <img class="social-logo" src="img/icons/whatsapp.svg" alt=""> Encargar por WhatsApp
+              </a>
+              <a class="button chicken-phone" href="tel:+34646987656"><span aria-hidden="true">☎</span> Llamar al 646 987 656</a>
+            </div>
+          </div>
+
+          <div class="chicken-promo-visual">
+            <figure class="chicken-photo">
+              <picture>
+                <source srcset="img/webp/Pollo_a_last.webp" type="image/webp">
+                <img src="img/Pollo_a_last.jpg" alt="Pollo a l’ast dorado con patatas asadas y hierbas aromáticas" width="1200" height="800" loading="lazy">
+              </picture>
+            </figure>
+            <span class="chicken-badge">Solo domingos</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery-section" id="galeria" aria-labelledby="gallery-title">
+        <div class="section-heading">
+          <span class="heading-ornament" aria-hidden="true">◆ ◆ ◆</span>
+          <h2 id="gallery-title">Nuestra cocina</h2>
+        </div>
+
+        <div class="carousel" role="region" aria-roledescription="carrusel" aria-label="Galería de nuestra cocina" tabindex="0">
+          <button class="carousel-arrow carousel-prev" type="button" aria-label="Ver imágenes anteriores">‹</button>
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <figure class="carousel-slide" role="button" tabindex="0" data-gallery-slide aria-label="Ampliar: Calamares fritos con limón"><picture><source srcset="img/webp/calamares.webp" type="image/webp"><img src="img/calamares.jpg" alt="Calamares fritos con limón" width="4032" height="2268"></picture></figure>
+              <figure class="carousel-slide" role="button" tabindex="0" data-gallery-slide aria-label="Ampliar: Tabla de quesos con fruta y frutos secos"><picture><source srcset="img/webp/quesos.webp" type="image/webp"><img src="img/quesos.jpg" alt="Tabla de quesos con fruta y frutos secos" width="4032" height="2268" loading="lazy"></picture></figure>
+              <figure class="carousel-slide" role="button" tabindex="0" data-gallery-slide aria-label="Ampliar: Galletas artesanas con chocolate"><picture><source srcset="img/webp/galleta_01.webp" type="image/webp"><img src="img/galleta_01.jpeg" alt="Galletas artesanas con chocolate" width="1166" height="1440" loading="lazy"></picture></figure>
+              <figure class="carousel-slide" role="button" tabindex="0" data-gallery-slide aria-label="Ampliar: Queso rebozado con salsa"><picture><source srcset="img/webp/queso_rebozado.webp" type="image/webp"><img src="img/queso_rebozado.jpg" alt="Queso rebozado con salsa" width="4032" height="2268" loading="lazy"></picture></figure>
+              <figure class="carousel-slide" role="button" tabindex="0" data-gallery-slide aria-label="Ampliar: Pollo asado con guarnición"><picture><source srcset="img/webp/pollo.webp" type="image/webp"><img src="img/pollo.jpg" alt="Pollo asado con guarnición" width="4032" height="2268" loading="lazy"></picture></figure>
+              <figure class="carousel-slide" role="button" tabindex="0" data-gallery-slide aria-label="Ampliar: Selección de bebidas"><picture><source srcset="img/webp/botellas.webp" type="image/webp"><img src="img/botellas.jpg" alt="Selección de bebidas" width="2543" height="2194" loading="lazy"></picture></figure>
+              <figure class="carousel-slide" role="button" tabindex="0" data-gallery-slide aria-label="Ampliar: Nachos preparados para compartir"><picture><source srcset="img/webp/nachos.webp" type="image/webp"><img src="img/nachos.jpg" alt="Nachos preparados para compartir" width="4032" height="2268" loading="lazy"></picture></figure>
+              <figure class="carousel-slide" role="button" tabindex="0" data-gallery-slide aria-label="Ampliar: Galleta artesana de chocolate"><picture><source srcset="img/webp/galleta_02.webp" type="image/webp"><img src="img/galleta_02.jpeg" alt="Galleta artesana de chocolate" width="1043" height="1501" loading="lazy"></picture></figure>
+              <figure class="carousel-slide" role="button" tabindex="0" data-gallery-slide aria-label="Ampliar: Terraza de L’olla d’en Xavi"><picture><source srcset="img/webp/terraza.webp" type="image/webp"><img src="img/terraza.jpg" alt="Terraza de L’olla d’en Xavi" width="2290" height="2712" loading="lazy"></picture></figure>
+            </div>
+          </div>
+          <button class="carousel-arrow carousel-next" type="button" aria-label="Ver imágenes siguientes">›</button>
+          <div class="carousel-dots" aria-label="Seleccionar grupo de imágenes"></div>
+          <p class="sr-only" aria-live="polite" data-carousel-status></p>
+        </div>
+      </section>
+
+      <section class="contact-banner" id="contacto" aria-labelledby="contact-title">
+        <h2 class="sr-only" id="contact-title">Reserva, ubicación y redes sociales</h2>
+        <div class="contact-panel contact-panel-yellow">
+          <a class="contact-item" href="https://wa.me/34646987656" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon" aria-hidden="true"><img class="social-logo social-logo-yellow" src="img/icons/whatsapp.svg" alt=""></span>
+            <span><small>Haz tu reserva por teléfono o WhatsApp</small><strong>646 987 656</strong></span>
+          </a>
+          <a class="contact-item address-item" href="https://www.google.com/maps/search/?api=1&amp;query=Muralla+41+43884+Bonastre+Tarragona" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon" aria-hidden="true">●</span>
+            <span><small>Cómo llegar</small><strong>Muralla, 41</strong><em>43884 Bonastre · Tarragona</em></span>
+          </a>
+        </div>
+
+        <div class="contact-panel contact-panel-dark">
+          <a class="instagram-block" href="https://www.instagram.com/lolla_den_xavi/" target="_blank" rel="noopener noreferrer">
+            <span class="instagram-mark" aria-hidden="true"><img class="social-logo social-logo-yellow" src="img/icons/instagram.svg" alt=""></span>
+            <span><small>Síguenos en Instagram</small><strong>@lolla_den_xavi</strong></span>
+          </a>
+          <p class="social-ribbon">Fotos, novedades, ofertas ¡y mucho más!</p>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="gallery-modal" id="gallery-modal" aria-labelledby="gallery-modal-title">
+      <div class="gallery-modal-panel">
+        <h2 class="sr-only" id="gallery-modal-title">Galería de imágenes ampliadas</h2>
+        <button class="gallery-modal-close" type="button" aria-label="Cerrar galería">×</button>
+        <button class="gallery-modal-arrow gallery-modal-prev" type="button" aria-label="Imagen anterior">‹</button>
+        <figure class="gallery-modal-figure">
+          <img alt="" data-gallery-image>
+          <figcaption data-gallery-counter aria-live="polite"></figcaption>
+        </figure>
+        <button class="gallery-modal-arrow gallery-modal-next" type="button" aria-label="Imagen siguiente">›</button>
+      </div>
+    </dialog>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="img/Logo transparente contorno blanco l_olla_d_en_xavi.png" alt="L’olla d’en Xavi" width="1474" height="1265" loading="lazy">
+        </div>
+
+        <section class="footer-column" aria-labelledby="hours-title">
+          <h2 id="hours-title">Horario</h2>
+          <p>Lunes a viernes<br>9:00 – 16:30 h</p>
+          <p>Sábado<br>9:00 – 17:00 h</p>
+          <p>Domingo<br>9:00 – 15:30 h</p>
+        </section>
+
+        <nav class="footer-column" aria-labelledby="links-title">
+          <h2 id="links-title">Enlaces</h2>
+          <a href="#inicio">Inicio</a>
+          <a href="#accesos">Menú y carta</a>
+          <a href="#galeria">Galería</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <section class="footer-column footer-contact" aria-labelledby="footer-contact-title">
+          <h2 id="footer-contact-title">Contacto</h2>
+          <a href="tel:+34646987656"><span aria-hidden="true">☎</span> 646 987 656</a>
+          <a href="mailto:info@lolladenxavi.com"><span aria-hidden="true">✉</span> info@lolladenxavi.com</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Muralla+41+43884+Bonastre+Tarragona" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">●</span> Muralla, 41 · 43884 Bonastre · Tarragona</a>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/lolla_den_xavi/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img class="social-logo" src="img/icons/instagram.svg" alt=""></a>
+            <a href="https://wa.me/34646987656" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><img class="social-logo" src="img/icons/whatsapp.svg" alt=""></a>
+          </div>
+        </section>
+      </div>
+      <div class="copyright">© 2026 L’olla d’en Xavi · Todos los derechos reservados</div>
+    </footer>
+  </body>
+</html>
