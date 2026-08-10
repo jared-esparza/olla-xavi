@@ -570,8 +570,8 @@ button {
 }
 
 .chicken-actions {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: max-content max-content;
   gap: 12px;
 }
 
@@ -582,6 +582,17 @@ button {
 .chicken-actions .social-logo {
   width: 21px;
   height: 21px;
+}
+
+.chicken-flyers {
+  grid-column: 1;
+  width: 100%;
+}
+
+.chicken-flyers img {
+  width: 21px;
+  height: 22px;
+  object-fit: contain;
 }
 
 .chicken-phone {
@@ -1175,6 +1186,12 @@ body.gallery-open {
   background: var(--yellow);
   font-size: 12px;
   text-align: center;
+}
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .chicken-actions {
+    grid-template-columns: minmax(0, 242px);
+  }
 }
 
 @media (max-width: 1100px) {

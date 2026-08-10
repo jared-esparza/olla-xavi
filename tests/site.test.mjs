@@ -173,3 +173,22 @@ test('sustituye los horarios del pie por un único botón', () => {
   assert.match(footer, />Ver horario <span aria-hidden="true">→<\/span><\/a>/i);
   assert.doesNotMatch(footer, /Lunes a viernes|Sábado<br>|Domingo<br>|9:00|16:30|17:00|15:30/);
 });
+
+test('ofrece acceso a los flyers desde la promoción de pollos', () => {
+  const html = readFileSync(resolve(root, 'index.html'), 'utf8');
+  const css = readFileSync(resolve(root, 'styles.css'), 'utf8');
+  const promo = html.slice(html.indexOf('<section class="chicken-promo"'), html.indexOf('<section class="gallery-section"'));
+  const baseCss = css.slice(0, css.indexOf('@media'));
+  const flyersIcon = resolve(root, 'img', 'icons', 'picto_flyers.png');
+  const flyersLink = promo.match(/<a class="button chicken-flyers"[^>]*>[\s\S]*?<\/a>/)?.[0] ?? '';
+
+  assert.ok(existsSync(flyersIcon), 'falta el pictograma de flyers');
+  assert.match(flyersLink, /href="https:\/\/sites\.google\.com\/view\/menudiario-llolladenxavi\/inicio\/flyers"/);
+  assert.doesNotMatch(flyersLink, /target="_blank"/);
+  assert.match(flyersLink, /<img src="img\/icons\/picto_flyers\.png" alt="" width="244" height="254">/);
+  assert.match(flyersLink, /Ver flyers/);
+  assert.match(baseCss, /\.chicken-actions\s*\{[^}]*display:\s*grid;[^}]*grid-template-columns:\s*max-content max-content;/s);
+  assert.match(baseCss, /\.chicken-flyers\s*\{[^}]*grid-column:\s*1;/s);
+  assert.match(css, /@media\s*\(min-width:\s*769px\)\s*and\s*\(max-width:\s*1100px\)[\s\S]*?\.chicken-actions\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*242px\);/s);
+  assert.match(css, /@media\s*\(max-width:\s*560px\)[\s\S]*?\.chicken-actions\s*\{[^}]*grid-template-columns:\s*1fr;/s);
+});
