@@ -192,3 +192,27 @@ test('ofrece acceso a los flyers desde la promoción de pollos', () => {
   assert.match(css, /@media\s*\(min-width:\s*769px\)\s*and\s*\(max-width:\s*1100px\)[\s\S]*?\.chicken-actions\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*242px\);/s);
   assert.match(css, /@media\s*\(max-width:\s*560px\)[\s\S]*?\.chicken-actions\s*\{[^}]*grid-template-columns:\s*1fr;/s);
 });
+
+test('muestra un pin de ubicación accesible en el pie', () => {
+  const html = readFileSync(resolve(root, 'index.html'), 'utf8');
+  const css = readFileSync(resolve(root, 'styles.css'), 'utf8');
+  const footer = html.slice(html.indexOf('<footer class="site-footer"'));
+  const locationLink = footer.match(/<a href="https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=Muralla\+41\+43884\+Bonastre\+Tarragona"[\s\S]*?<\/a>/)?.[0] ?? '';
+
+  assert.match(locationLink, /<svg class="footer-location-icon"[^>]*aria-hidden="true"[^>]*focusable="false"/);
+  assert.match(locationLink, /<path[^>]+>/);
+  assert.match(locationLink, /<circle[^>]+>/);
+  assert.doesNotMatch(locationLink, /●/);
+  assert.match(css, /\.footer-location-icon\s*\{[^}]*width:\s*20px;[^}]*height:\s*20px;[^}]*flex-shrink:\s*0;[^}]*color:\s*var\(--yellow\);/s);
+});
+
+test('muestra el pin de ubicación en la caja Cómo llegar', () => {
+  const html = readFileSync(resolve(root, 'index.html'), 'utf8');
+  const contactBanner = html.slice(html.indexOf('<section class="contact-banner"'), html.indexOf('<footer class="site-footer"'));
+  const addressLink = contactBanner.match(/<a class="contact-item address-item"[\s\S]*?<\/a>/)?.[0] ?? '';
+
+  assert.match(addressLink, /<span class="contact-icon" aria-hidden="true">\s*<svg class="contact-location-icon"[^>]*focusable="false"/);
+  assert.match(addressLink, /<path[^>]+>/);
+  assert.match(addressLink, /<circle[^>]+>/);
+  assert.doesNotMatch(addressLink, /●/);
+});

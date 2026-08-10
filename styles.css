@@ -865,6 +865,16 @@ button {
   height: 29px;
 }
 
+.contact-location-icon {
+  width: 30px;
+  height: 30px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .contact-item span:last-child {
   min-width: 0;
   display: flex;
@@ -1040,6 +1050,23 @@ button {
   min-width: 20px;
   color: var(--yellow);
   font-size: 17px;
+}
+
+.footer-contact a .footer-location-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--yellow);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.footer-contact a .footer-location-icon + span {
+  color: inherit;
+  font-size: inherit;
 }
 
 .footer-socials {
