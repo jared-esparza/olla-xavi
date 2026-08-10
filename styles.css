@@ -411,13 +411,17 @@ button {
 }
 
 .quick-icon {
-  width: 54px;
-  height: 42px;
+  width: 58px;
+  height: 58px;
   display: grid;
   place-items: center;
-  color: var(--yellow);
-  font-size: 39px;
-  line-height: 1;
+}
+
+.quick-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
 }
 
 .quick-card h3 {
@@ -999,6 +1003,20 @@ button {
 
 .footer-column p + p {
   margin-top: 4px;
+}
+
+.footer-hours-link {
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-hours-link .button {
+  width: 100%;
+  max-width: 210px;
+  min-height: 50px;
+  margin: 0;
+  padding: 12px 20px;
+  font-size: 19px;
 }
 
 .footer-contact a {
@@ -1711,6 +1729,11 @@ body.gallery-open {
 
   .footer-brand img {
     width: 104px;
+  }
+
+  .footer-hours-link .button {
+    width: min(100%, 330px);
+    max-width: none;
   }
 
   .gallery-modal-panel {
